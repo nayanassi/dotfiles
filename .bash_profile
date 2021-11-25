@@ -51,31 +51,3 @@ Enter \"alias\" to list the available aliased commands
 pwd: `pwd`"
 
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '~/google-cloud-sdk/path.bash.inc' ]; then . '~/google-cloud-sdk/path.bash.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '~/google-cloud-sdk/completion.bash.inc' ]; then . '~/google-cloud-sdk/completion.bash.inc'; fi
-export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
-export PATH=~/git-repos/awssume/bin:$PATH
-export PATH=~/git-repos/awssume/bin:$PATH
-
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
-
-# The next lines are for iTerm2 badges
-# see: https://medium.com/@adrian_cooney/iterm-tip-add-custom-badges-on-a-per-directory-basis-1d54dfc6b6e4
-
-function iterm2_print_user_vars() {
-  iterm2_set_user_var badge $(dir_badges)
-}
-
-function dir_badges() {
-    while read directory badge || [[ -n "$directory" ]]
-    do
-        if [[ "$PWD" == $directory* ]]; then
-            echo $badge
-            break
-        fi
-    done < ~/.badges
-}
-export GPG_TTY=$(tty)
