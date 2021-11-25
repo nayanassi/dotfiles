@@ -7,36 +7,19 @@ export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
 alias   ls='ls -bFGH'
-alias   gogit='cd ~/git-repos/docs-internal'
-alias   nt='~/programming/bash-scripts/notetaker.sh'
 
 alias   branchdate='git for-each-ref --sort=-committerdate refs/heads/ --format="%(refname)   ----  %(committerdate) - %(authorname)" | sed "s/refs\/heads\///g"'
-alias   bd='bash ~/programming/bash-scripts/branchlister.sh'
-alias   bl='bash ~/programming/bash-scripts/branchlister.sh'
-alias   bb='bash ~/programming/bash-scripts/branchpicker.sh'
-alias   bb1='bash ~/programming/bash-scripts/branchpicker.sh 1'
-alias   bb2='bash ~/programming/bash-scripts/branchpicker.sh 2'
-alias   bb3='bash ~/programming/bash-scripts/branchpicker.sh 3'
-alias   bb4='bash ~/programming/bash-scripts/branchpicker.sh 4'
-alias   bb5='bash ~/programming/bash-scripts/branchpicker.sh 5'
-alias   bb6='bash ~/programming/bash-scripts/branchpicker.sh 6'
-alias   bb7='bash ~/programming/bash-scripts/branchpicker.sh 7'
-alias   bb8='bash ~/programming/bash-scripts/branchpicker.sh 8'
-
-# lu = laptop under monitor, ll = laptop left of monitor, 1 = big monitor, 2 = Dell monitor
-alias   lu1='displayplacer "id:5092753A-827A-EC3D-BE38-C3DFE02BDE9A res:1920x1200 hz:59 color_depth:8 scaling:off origin:(0,0) degree:0" "id:7B1B27C9-8B33-CAE1-6864-E990C08CC24B res:1792x1120 hz:59 color_depth:4 scaling:on origin:(128,1200) degree:0"'
-alias   ll1='displayplacer "id:064659EA-6F86-4244-EB89-D4DF034B1BD2 res:3008x1692 hz:60 color_depth:8 scaling:on origin:(0,0) degree:0" "id:7B1B27C9-8B33-CAE1-6864-E990C08CC24B res:1792x1120 hz:59 color_depth:4 scaling:on origin:(-1792,920) degree:0"'
-alias   lu2='displayplacer "id:064659EA-6F86-4244-EB89-D4DF034B1BD2 res:3008x1692 hz:60 color_depth:8 scaling:on origin:(0,0) degree:0" "id:7B1B27C9-8B33-CAE1-6864-E990C08CC24B res:1792x1120 hz:59 color_depth:4 scaling:on origin:(688,1692) degree:0"'
-alias   ll2='displayplacer "id:5092753A-827A-EC3D-BE38-C3DFE02BDE9A res:1920x1200 hz:59 color_depth:8 scaling:off origin:(0,0) degree:0" "id:7B1B27C9-8B33-CAE1-6864-E990C08CC24B res:1792x1120 hz:59 color_depth:4 scaling:on origin:(-1792,0) degree:0"'
-alias   lm='displayplacer "id:5092753A-827A-EC3D-BE38-C3DFE02BDE9A+7B1B27C9-8B33-CAE1-6864-E990C08CC24B+064659EA-6F86-4244-EB89-D4DF034B1BD2 res:1920x1200 hz:59 color_depth:8 scaling:off origin:(0,0) degree:0"'
-
-alias ddi='cd ~/git-repos/docs-internal'
-alias ddc='cd ~/git-repos/docs-content'
-alias ddo='cd ~/git-repos/docs'
-alias ghgh='cd ~/git-repos/github'
-
-alias   mylog='git log --author=hubwriter --oneline -5 --no-merges'
-gogit
+alias   bd='bash ~/.scripts/branchlister.sh'
+alias   bl='bash ~/.scripts/branchlister.sh'
+alias   bb='bash ~/.scripts/branchpicker.sh'
+alias   bb1='bash ~/.scripts/branchpicker.sh 1'
+alias   bb2='bash ~/.scripts/branchpicker.sh 2'
+alias   bb3='bash ~/.scripts/branchpicker.sh 3'
+alias   bb4='bash ~/.scripts/branchpicker.sh 4'
+alias   bb5='bash ~/.scripts/branchpicker.sh 5'
+alias   bb6='bash ~/.scripts/branchpicker.sh 6'
+alias   bb7='bash ~/.scripts/branchpicker.sh 7'
+alias   bb8='bash ~/.scripts/branchpicker.sh 8'
 
 source ~/.git-prompt.sh
 PS1='\[\033[1;36m\]\w\[\033[0m\] \[\033[1;32m\]$(__git_ps1)\[\033[0m\]'$'\n\$ '
