@@ -42,9 +42,9 @@ echo -e "
 ####################################################
 #
 #  Welcome to hostname: ${HOSTNAME}
-#  You are logged in as: ${USERNAME}
-#  Bash config file: ${BASH_SOURCE[0]}
+#  You are logged in as: ${USER}
 #  \$HOME = ${HOME}
+#  Bash config file: ${BASH_SOURCE[0]}
 #
 ####################################################
 
