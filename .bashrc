@@ -1,4 +1,3 @@
-source ~/.profile
 LS_COLORS='di=1;0;42:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35;40:*.rpm=90'
 export LS_COLORS
 
@@ -29,14 +28,10 @@ export GIT_PS1_SHOWDIRTYSTATE GIT_PS1_SHOWUPSTREAM
 export PATH=${PATH}:~/.node/bin:~/.nodenv/versions/14.13.0/
 export HOMEBREW_AUTO_UPDATE_SECS=3600
 export EDITOR=vi
-export TOKEN=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
 eval $(ssh-agent); ssh-add
 eval "$(nodenv init -)"
 eval "$(rbenv init -)"
 
-code --install-extension .vscode/open-reusable-1.3.0.vsix
-
-#
 echo -e "
 
 ####################################################
