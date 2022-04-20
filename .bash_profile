@@ -32,8 +32,6 @@ eval $(ssh-agent); ssh-add
 eval "$(nodenv init -)"
 eval "$(rbenv init -)"
 
-code --install-extension .vscode/open-reusable-1.3.0.vsix
-
 #
 echo -e "
 
