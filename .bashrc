@@ -2,8 +2,8 @@ LS_COLORS='di=1;0;42:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35;40:*.rpm=90
 export LS_COLORS
 
 # Next 2 lines from https://michael-kuehnel.de/node.js/2015/09/08/using-vm-to-switch-node-versions.html
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+# export NVM_DIR=~/.nvm
+# source $(brew --prefix nvm)/nvm.sh
 
 alias   ls='ls -bFGH'
 
@@ -29,8 +29,8 @@ export PATH=${PATH}:~/.node/bin:~/.nodenv/versions/14.13.0/
 export HOMEBREW_AUTO_UPDATE_SECS=3600
 export EDITOR=vi
 eval $(ssh-agent); ssh-add
-eval "$(nodenv init -)"
-eval "$(rbenv init -)"
+# eval "$(nodenv init -)"
+# eval "$(rbenv init -)"
 
 echo -e "
 
