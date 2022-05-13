@@ -47,4 +47,4 @@ Enter \"alias\" to list the available aliased commands
 
 pwd: `pwd`"
 
-
+DOTFILE=testvalue5
