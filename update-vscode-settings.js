@@ -1,4 +1,7 @@
 #!/usr/bin/env node
+
+// From: https://github.com/hashtagchris/dotfiles
+
 const fs = require('fs')
 const process = require('process')
 
