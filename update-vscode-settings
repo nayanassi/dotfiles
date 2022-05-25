@@ -1,0 +1,53 @@
+#!/bin/sh
+
+if ! command -v node > /dev/null
+then
+  echo "node not installed, skipping vscode setting.json updates"
+  exit 0
+fi
+
+SELFDIR=$(cd "$(dirname "$0")"; pwd)
+PETNAME="$(cat ~/.petname)"
+CODESPACE_NAME_SUFFIX="${CODESPACE_NAME##*-}"
+
+if [ $CODESPACE_VSCODE_FOLDER ]
+then
+  SETTINGS_DIR=$CODESPACE_VSCODE_FOLDER/.vscode
+  SETTINGS_PATH=$SETTINGS_DIR/settings.json
+
+  # Ensure settings.json exists
+  if ! [ -s $SETTINGS_PATH ]
+  then
+    mkdir -p $SETTINGS_DIR
+    echo "{}" > $SETTINGS_PATH
+  fi
+elif [ $CODESPACE_VSCODE_WORKSPACE ]
+then
+  SETTINGS_PATH=$CODESPACE_VSCODE_WORKSPACE
+else
+  echo "CODESPACE_VSCODE_FOLDER nor CODESPACE_VSCODE_WORKSPACE isn't set, skipping vscode setting.json updates"
+  exit 0
+fi
+
+if [ -L $SETTINGS_PATH ]
+then
+  SETTINGS_PATH=$(readlink $SETTINGS_PATH)
+fi
+
+SETTINGS_DIR=$(dirname $SETTINGS_PATH)
+
+# echo "Settings path: $SETTINGS_PATH"
+
+# If settings.json is committed, don't track changes
+if git -C $SETTINGS_DIR ls-files --error-unmatch $SETTINGS_PATH > /dev/null 2>&1
+then
+  # echo "Configuring git to ignore changes to $SETTINGS_PATH"
+  git -C $SETTINGS_DIR update-index --skip-worktree $SETTINGS_PATH
+fi
+
+mkdir -p /tmp/update-vscode-settings
+echo $SETTINGS_PATH > /tmp/update-vscode-settings/path
+cp $SETTINGS_PATH /tmp/update-vscode-settings/before.json
+
+$SELFDIR/update-vscode-settings.js "$SETTINGS_PATH" "$PETNAME" "$CODESPACE_NAME_SUFFIX"
+cp $SETTINGS_PATH /tmp/update-vscode-settings/after.json
