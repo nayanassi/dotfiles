@@ -38,5 +38,6 @@
    },
    // Theme:
    "workbench.colorTheme": "Visual Studio Dark",
-   "workbench.iconTheme": "ayu"
+   "workbench.iconTheme": "ayu",
+   "window.zoomLevel": -1
 }
