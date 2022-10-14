@@ -39,3 +39,12 @@ else
   run_dotbot 'steps/dependencies.yml' || true
 fi
 run_dotbot 'steps/vscode.yml' || true
+
+# Install my .bashrc
+# If we are on codespaces copy over the .bashrc file:
+
+if ("$CODESPACES" == "true") then
+    cp -R .scripts ~/.scripts
+    cp .bashrc ~/.bashrc
+    source ~/.bashrc
+fi
