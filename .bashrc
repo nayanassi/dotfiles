@@ -20,6 +20,8 @@ alias   bb6='bash ~/.scripts/branchpicker.sh 6'
 alias   bb7='bash ~/.scripts/branchpicker.sh 7'
 alias   bb8='bash ~/.scripts/branchpicker.sh 8'
 
+alias   mystuff='~/run.sh'
+
 source ~/.git-prompt.sh
 PS1='\[\033[1;36m\]\w\[\033[0m\] \[\033[1;32m\]$(__git_ps1)\[\033[0m\]'$'\n\$ '
 GIT_PS1_SHOWDIRTYSTATE=1
@@ -43,8 +45,8 @@ echo -e "
 #
 ####################################################
 
-Enter \"alias\" to list the available aliased commands
+Current directory: `pwd`
+Enter \"alias\" to list the available aliased commands.
+Enter \"mystuff\" to install useful extensions."
 
-pwd: `pwd`"
 
-DOTFILE=testvalue5
