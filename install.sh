@@ -13,6 +13,8 @@ if ("$CODESPACES" == "true") then
     # Copy over the .bashrc and script files:    
     cp -R .scripts ~/.scripts
     cp .bashrc ~/.bashrc
+    cp .bash_profile ~/.bash_profile
+    source ~/.bash_profile
     source ~/.bashrc
     
     # Install useful extensions:
