@@ -47,6 +47,6 @@ echo -e "
 
 Current directory: `pwd`
 Enter \"alias\" to list the available aliased commands.
-Enter \"mystuff\" to install useful extensions."
+Enter \"mystuff\" to install useful extensions.
 
-
+"
