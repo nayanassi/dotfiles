@@ -41,22 +41,3 @@ fi
 run_dotbot 'steps/vscode.yml' || true
 
 
-# Install my .bashrc
-
-if [ "$CODESPACES" = true ]; then
-    echo "Installing .bashrc from https://github.com/hubwriter/dotfiles"
-    
-    # Fix the git_ps1 prompt:
-    curl -L https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh > ~/.bash_git
-    source ~/.bash_git
-    
-    # Copy over the .bashrc and script files:    
-    cp -R .scripts ~/.scripts
-    cp .bashrc ~/.bashrc
-    source ~/.bashrc
-    
-    # Install useful extensions:
-    code --install-extension yoshinorin.current-file-path
-    code --install-extension sleistner.vscode-fileutils
-    code --install-extension peterbe.ghdocs-goer
-fi
