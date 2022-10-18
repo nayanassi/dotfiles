@@ -43,7 +43,7 @@ run_dotbot 'steps/vscode.yml' || true
 
 # Install my .bashrc
 
-if ("$CODESPACES" == "true") then
+if ("$CODESPACES") then
     # Fix the git_ps1 prompt:
     curl -L https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh > ~/.bash_git
     source ~/.bash_git
@@ -52,4 +52,9 @@ if ("$CODESPACES" == "true") then
     cp -R .scripts ~/.scripts
     cp .bashrc ~/.bashrc
     source ~/.bashrc
+    
+    # Install useful extensions:
+    code --install-extension yoshinorin.current-file-path
+    code --install-extension sleistner.vscode-fileutils
+    code --install-extension peterbe.ghdocs-goer
 fi
