@@ -14,7 +14,6 @@ if ("$CODESPACES" == "true") then
     cp -R .scripts ~/.scripts
     cp .bashrc ~/.bashrc
     cp .bash_profile ~/.bash_profile
-    source ~/.bash_profile
     source ~/.bashrc
     
     # Install useful extensions:
