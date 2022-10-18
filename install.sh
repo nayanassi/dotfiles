@@ -13,5 +13,5 @@ if ("$CODESPACES" == "true") then
     cp .bash_profile ~/.bash_profile     # copy the .bash_profile file 
     source ~/.bashrc                     # run the .bashrc
     
-    echo "To install useful extensions, run the command: run.sh"
+    echo "To install useful extensions, type: ./run.sh"
 fi
