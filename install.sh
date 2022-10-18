@@ -8,6 +8,7 @@ if ("$CODESPACES" == "true") then
 
     # Copy files into the codespace:    
     cp -R .scripts ~/.scripts            # .scripts directory contains the branchlister scripts
+    cp run.sh ~/run.sh                   # add the script for installing extensions
     cp .git-prompt.sh ~/.git-prompt.sh   # this add the Git prompt
     cp .bashrc ~/.bashrc                 # copy the .bashrc file
     cp .bash_profile ~/.bash_profile     # copy the .bash_profile file 
@@ -16,6 +17,6 @@ if ("$CODESPACES" == "true") then
     echo
     echo
     echo "********************************************"
-    echo "To install useful extensions, type: ./run.sh"
+    echo "To install useful extensions, type: ~/run.sh"
     echo "********************************************"
 fi
