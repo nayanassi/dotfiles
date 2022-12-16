@@ -14,5 +14,5 @@ if ("$CODESPACES" == "true") then
     cp .bash_profile ~/.bash_profile     # copy the .bash_profile file 
     source ~/.bashrc                     # run the .bashrc
     
-    ~/run.sh  # Install my personal choice of VS Code extensions  
+    source ~/run.sh  # Install my personal choice of VS Code extensions  
 fi
