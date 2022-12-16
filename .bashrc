@@ -34,6 +34,9 @@ eval $(ssh-agent); ssh-add
 # eval "$(nodenv init -)"
 # eval "$(rbenv init -)"
 
+source ~/run.sh  # Install my personal choice of VS Code extensions  
+
+
 echo -e "
 
 ####################################################
