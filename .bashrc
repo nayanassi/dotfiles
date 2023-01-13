@@ -6,6 +6,7 @@ export LS_COLORS
 # source $(brew --prefix nvm)/nvm.sh
 
 alias   ls='ls -bFGH'
+alias   getrepo='sensible-browser $(git config --get remote.origin.url)'
 
 alias   branchdate='git for-each-ref --sort=-committerdate refs/heads/ --format="%(refname)   ----  %(committerdate) - %(authorname)" | sed "s/refs\/heads\///g"'
 alias   bd='bash ~/.scripts/branchlister.sh'
