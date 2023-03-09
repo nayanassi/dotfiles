@@ -1,9 +1,6 @@
 LS_COLORS='di=1;0;42:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35;40:*.rpm=90'
 export LS_COLORS
 
-export SHELL=/bin/zsh
-exec /bin/zsh -l
-
 # Next 2 lines from https://michael-kuehnel.de/node.js/2015/09/08/using-vm-to-switch-node-versions.html
 # export NVM_DIR=~/.nvm
 # source $(brew --prefix nvm)/nvm.sh
