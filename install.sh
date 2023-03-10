@@ -17,8 +17,8 @@ if ("$CODESPACES" == "true") then
     #   sudo apt-get install --yes zsh
     #   sudo chsh "$(id -un)" --shell "/usr/bin/zsh"
 
-   sudo apt-add-repository ppa:fish-shell/release-3 
-   sudo apt-get update && sudo apt-get upgrade
+   # sudo apt-add-repository ppa:fish-shell/release-3 
+   # sudo apt-get update && sudo apt-get upgrade
    sudo apt-get install --yes fish
    sudo chsh "$(id -un)" --shell "/usr/local/bin/fish"
 
