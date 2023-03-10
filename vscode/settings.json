@@ -1,8 +1,9 @@
 {
-   "terminal.integrated.shell.linux": "zsh",
-   "terminal.integrated.defaultProfile.osx": "zsh",
-   "terminal.integrated.defaultProfile.linux": "zsh",
-   "terminal.integrated.defaultProfile.windows": "zsh",
+   // "terminal.integrated.shell.linux": "zsh",  // Note: this setting is now deprecated in favour of defaultProfile
+   // Set default shell (bash by default and always initially bash in the VS Code web client)
+   "terminal.integrated.defaultProfile.osx": "bash",
+   "terminal.integrated.defaultProfile.linux": "bash",
+   "terminal.integrated.defaultProfile.windows": "bash",
    "cSpell.language": ",en",
    "files.exclude": {
       "**/translations": true
