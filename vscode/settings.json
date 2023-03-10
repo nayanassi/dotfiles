@@ -1,8 +1,8 @@
 {
-   "terminal.integrated.shell.linux": "/bin/bash",
-   "terminal.integrated.defaultProfile.osx": "fish",
-   "terminal.integrated.defaultProfile.linux": "fish",
-   "terminal.integrated.defaultProfile.windows": "PowerShell",
+   "terminal.integrated.shell.linux": "zsh",
+   "terminal.integrated.defaultProfile.osx": "zsh",
+   "terminal.integrated.defaultProfile.linux": "zsh",
+   "terminal.integrated.defaultProfile.windows": "zsh",
    "cSpell.language": ",en",
    "files.exclude": {
       "**/translations": true
