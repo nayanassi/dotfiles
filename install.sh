@@ -7,12 +7,12 @@ if ("$CODESPACES" == "true") then
     cp vscode/settings.json ~/.vscode-remote/data/Machine/settings.json
 
     # Copy files into the codespace:    
-    cp -R .scripts ~/.scripts            # .scripts directory contains the branchlister scripts
-    cp run.sh ~/run.sh                   # add the script for installing extensions
-    cp .git-prompt.sh ~/.git-prompt.sh   # this add the Git prompt
-    cp .bashrc ~/.bashrc                 # copy the .bashrc file
-    cp .bash_profile ~/.bash_profile     # copy the .bash_profile file 
-    source ~/.bashrc                     # run the .bashrc
+    #    cp -R .scripts ~/.scripts            # .scripts directory contains the branchlister scripts
+    #    cp run.sh ~/run.sh                   # add the script for installing extensions
+    #    cp .git-prompt.sh ~/.git-prompt.sh   # this add the Git prompt
+    #    cp .bashrc ~/.bashrc                 # copy the .bashrc file
+    #    cp .bash_profile ~/.bash_profile     # copy the .bash_profile file 
+    #    source ~/.bashrc                     # run the .bashrc
     
     sudo apt-get install --yes zsh
     sudo chsh "$(id -un)" --shell "/usr/bin/zsh"
