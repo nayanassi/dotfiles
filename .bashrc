@@ -49,4 +49,8 @@ Enter \"alias\" to list the available aliased commands.
 
 "
 
-source ~/run.sh  # Install my personal choice of VS Code extensions  
+# If VS Code is installed, install my personal choice of VS Code extensions
+if command -v code &> /dev/null
+then
+  source ~/run.sh    
+fi
